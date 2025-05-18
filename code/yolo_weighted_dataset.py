@@ -34,10 +34,6 @@ class YOLOWeightedDataset(YOLODataset):
               weights.append(1)
               continue
 
-            # Take mean of weights
-            # You can change this weight aggregation function to aggregate weights differently
-            # weight = np.mean(self.class_weights[cls])
-            # weight = np.max(self.class_weights[cls])
             weight = self.agg_func(self.class_weights[cls])
             weights.append(weight)
         return weights

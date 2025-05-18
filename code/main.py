@@ -54,7 +54,7 @@ for fold in range(1, 6):
     fold_path = kfold_dir / f"fold_{fold}"
     fold_yaml = fold_path / "data.yaml"
 
-    model = YOLO('yolov8s.pt')  # ou outro modelo desejado
+    model = YOLO('yolov8s.pt')
 
     results = model.train(
         data=str(fold_yaml),
