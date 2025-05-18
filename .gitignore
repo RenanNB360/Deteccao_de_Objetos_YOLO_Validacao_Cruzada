@@ -1,0 +1,65 @@
+# Arquivo .gitignore para projetos YOLO com validação cruzada
+
+# Diretórios de saída do YOLO
+runs/
+data/
+kfold_data/
+
+# Diretórios de dados brutos (geralmente grandes)
+data/
+!data.yaml  # Mantém o arquivo de configuração
+
+# Arquivos de ambiente e IDE
+.env
+.venv/
+venv/
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Arquivos do Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Arquivos de notebook e Jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# Arquivos temporários
+*.log
+*.sql
+*.sqlite
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de treino específicos do YOLO
+*.pt  # Mantém apenas os pesos finais selecionados
+!yolov8*.pt  # Mantém os pesos base
+*.onnx
+*.engine
+
+# Arquivos de cache
+.cache/
+*.cache
